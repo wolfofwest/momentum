@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum app</title>
+  </head>
+
+  <body>
+    <form class="hidden" id="login-form">
+      <input
+        required
+        maxlength="20"
+        type="text"
+        placeholder="아이디 또는 전화번호"
+      />
+      <button>로그인</button>
+    </form>
+    <h2 id="clock">00:00:00</h2>
+    <h1 id="id-check" class="hidden"></h1>
+    <div id="quote">
+      <span></span>
+      <span>123</span>
+      <span>123</span>
+    </div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+  </body>
+</html>
