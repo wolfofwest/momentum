@@ -12,8 +12,9 @@ function svaeToDo() {
 
 function paintToDo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodo.Text;
 
   const btn = document.createElement("button");
   btn.innerText = "❎";
@@ -28,14 +29,16 @@ function paintToDo(newTodo) {
 function dltTOdo(event) {
   const li = event.target.parentElement;
   li.remove();
+  console.log(li.id);
 }
 
 function handlToDoSubmit(event) {
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";
-  toDos.push(newTodo);
-  paintToDo(newTodo);
+  const newTodoObj = { id: Date.now(), Text: newTodo };
+  toDos.push(newTodoObj);
+  paintToDo(newTodoObj);
   svaeToDo();
 }
 
