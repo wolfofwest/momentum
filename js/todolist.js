@@ -29,7 +29,8 @@ function paintToDo(newTodo) {
 function dltTOdo(event) {
   const li = event.target.parentElement;
   li.remove();
-  console.log(li.id);
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  svaeToDo();
 }
 
 function handlToDoSubmit(event) {
